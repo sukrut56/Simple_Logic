@@ -2,54 +2,54 @@ influenza_genome = [19, 15, 7, 9, 12, 6, 17, 20, 29, 14, 22, 8, 15, 12, 21, 25, 
 
 
 '''
-import numpy as np
+import numpy as np		#importing numpy 
 
 def three_one(my):
-	x = np.array([my])
-	length = len(x)
-	s = (x[0:length:25])
-	print(s[:10])
-	return s
+	x = np.array([my])	#converting input to array using np.array() method 
+	length = len(x)		#counting the length of input 
+	s = (x[0:length:25])	#selecting values from 0 to length of total array with a seperation of 25 indexes
+	print(s[:10])		#printing the first 10 elements of the array 
+	return s		
 
-three_one(influenza_genome)
+three_one(influenza_genome)	#executing the function 
 '''
 
 
 def three_one1(array):
-	x = (array)
-	length = len(x)
-	s = (x[0:length:25])
-	print(s[:10])
+	x = (array)		#assigning the  value of array as x 
+	length = len(x)		#checking the length of array 
+	s = (x[0:length:25])	#selecting values from 0 to length of array with seperation of 25 indexes 
+	print(s[:10])		#print first 10 elements of the array 
 
 three_one1(influenza_genome)
 
 '''
-import pandas as pd
-def three_two(my):
-	df = pd.DataFrame(my)
-	length = len(df)
-	p = (df[0:length:15])
-	t = p[:20]
-	return t
+import pandas as pd		#importing pandas
+def three_two(my):		
+	df = pd.DataFrame(my)	#converting the input to a dataframe using ppandas 
+	length = len(df)	#calculating the total length of dataframe 
+	p = (df[0:length:15])	#select elements from 0 to total length of dataframe and printing every yth element (15)
+	t = p[:20]		#printing the first 20 elements 
+	return t		#return the value so that we can use it later 
 
 three_two(influenza_genome)	
 '''
 
 def three_two(dataset):
-	df = (dataset)
-	length = len(df)
-	p = (df[0:length:15])
-	t = p[:20]
-	print(t)
-	return t
+	df = (dataset)		#assigning dataset value df 
+	length = len(df)	#calculating the length of dataframe 
+	p = (df[0:length:15])	#selecting the value from 0 to max length and printing every 15th element 
+	t = p[:20]		#printing first 20 elements 
+	print(t)		
+	return t		#returning the value t 
 
-three_two(influenza_genome)
+three_two(influenza_genome)	#executing the function 
 
 
 
 def three_three(t):
-	t = three_two(t)
-	res = t[0::2]
+	t = three_two(t)	#importing the output from 3.2 
+	res = t[0::2]		#printing every alternate element from the dataframe 
 	print(res)
 
-three_three(influenza_genome)
+three_three(influenza_genome)	#executing the function 
